@@ -14,7 +14,7 @@ class Wallet extends React.Component {
 
   render() {
     const { email } = this.props;
-    const { totalExpenses, currency } = this.state;
+    const { totalExpenses } = this.state;
     return (
       <div>
         <header>
@@ -25,7 +25,7 @@ class Wallet extends React.Component {
                 { `Despesas totais: R$ ${totalExpenses}` }
               </span>
             </div>
-            <div>
+            {/* <div>
               <label htmlFor="select-currency">
                 Moeda:
                 <select
@@ -35,7 +35,7 @@ class Wallet extends React.Component {
                   <option>{ currency }</option>
                 </select>
               </label>
-            </div>
+            </div> */}
           </div>
         </header>
       </div>

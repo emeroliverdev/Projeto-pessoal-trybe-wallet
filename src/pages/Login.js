@@ -33,6 +33,8 @@ class Login extends React.Component {
   render() {
     const { email, password } = this.state;
     const minLength = 6;
+    // Regex retirado do site:
+    // https://www.horadecodar.com.br/2020/09/07/expressao-regular-para-validar-e-mail-javascript-regex/
     const validemail = /\S+@\S+\.\S+/;
     return (
       <div className="login-page-global">
