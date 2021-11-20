@@ -1,0 +1,25 @@
+.login-page-global {
+  
+
+}
+
+.login-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  justify-content: space-between;
+  padding: 15%;
+}
+
+#input-email {
+  width: 200px;
+}
+
+#input-password {
+  width: 200px;
+}
+
+#btn-login {
+  width: 210px;
+}
