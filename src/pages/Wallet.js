@@ -19,7 +19,7 @@ class Wallet extends React.Component {
   }
 
   render() {
-    const { email, currencies } = this.props;
+    const { email } = this.props;
     const { totalExpenses } = this.state;
     return (
       <header>
@@ -29,16 +29,7 @@ class Wallet extends React.Component {
             <span data-testid="total-field">
               { `Despesas totais: R$ ${totalExpenses}` }
             </span>
-          </div>
-          <div className="header-menu">
-            <label htmlFor="select-currency">
-              Moeda
-              <select id="select-currency" data-testid="header-currency-field">
-                { Object.entries(currencies).map((element) => (
-                  <option key={ element[1].name }>{ element[1].code }</option>
-                ))}
-              </select>
-            </label>
+            <span data-testid="header-currency-field">BRL</span>
           </div>
         </div>
       </header>
