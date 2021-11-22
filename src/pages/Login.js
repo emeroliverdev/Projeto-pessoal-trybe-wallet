@@ -40,7 +40,7 @@ class Login extends React.Component {
       <div className="login-page-global">
         <div className="login-page">
           <input
-            id="input-email"
+            className="input-email"
             type="email"
             data-testid="email-input"
             placeholder="e-mail"
@@ -50,7 +50,7 @@ class Login extends React.Component {
             autoComplete="off"
           />
           <input
-            id="input-password"
+            className="input-password"
             type="password"
             data-testid="password-input"
             placeholder="Password"
@@ -59,7 +59,7 @@ class Login extends React.Component {
             name="password"
           />
           <button
-            id="btn-login"
+            className="btn-login"
             type="button"
             onClick={ this.onSubmitInfo }
             disabled={ password.length < minLength
