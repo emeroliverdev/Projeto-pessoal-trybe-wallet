@@ -1,0 +1,24 @@
+.form {
+  align-items: center;
+  background: #4f4f4f;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-addExpense {
+  background-color: dodgerblue;
+  border: 0;
+  color: white;
+  height: 25px;
+}
+
+.div-form {
+  align-items: center;
+  background: #4f4f4f;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  width: 70%;
+}

@@ -21,6 +21,7 @@ class Login extends React.Component {
     const { email } = this.state;
     dispatchUserValue(email);
     history.push('/carteira');
+    document.body.style.backgroundColor = 'white';
   }
 
   handleChange({ target }) {

@@ -2,25 +2,25 @@ import React from 'react';
 import './wallet.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import fetchCurrency from '../actions/fecthAPI';
-import { getCurrencies } from '../actions';
+import { actionFetchCurrencies } from '../actions';
+import Form from '../components/form';
 
 class Wallet extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      totalExpenses: 0,
-    };
-  }
-
   componentDidMount() {
     const { objCurrencies } = this.props;
-    fetchCurrency().then((response) => objCurrencies(response));
+    objCurrencies();
+    // fetchCurrency().then((response) => objCurrencies(response));
   }
 
   render() {
-    const { email } = this.props;
-    const { totalExpenses } = this.state;
+    // Lógica de soma das despesas: Referência - código do colega Raphael Taglialegna
+    const { email, expenses } = this.props;
+    const totalExpenses = parseFloat(expenses.reduce((acc, curr) => {
+      const { currency, exchangeRates } = curr;
+      const cotation = exchangeRates[currency].ask;
+      const conversion = parseInt(curr.value, Number) * cotation;
+      return acc + conversion;
+    }, 0)).toFixed(2);
     return (
       <header>
         <div className="container-header">
@@ -31,6 +31,7 @@ class Wallet extends React.Component {
             </span>
             <span data-testid="header-currency-field">BRL</span>
           </div>
+          <Form />
         </div>
       </header>
     );
@@ -40,10 +41,11 @@ class Wallet extends React.Component {
 const mapStateToProps = (state) => ({
   email: state.user.email,
   currencies: state.wallet.currencies,
+  expenses: state.wallet.expenses,
 });
 
 const mapDispatchToProps = (dispath) => ({
-  objCurrencies: (state) => dispath(getCurrencies(state)),
+  objCurrencies: () => dispath(actionFetchCurrencies()),
 });
 
 Wallet.propTypes = {
