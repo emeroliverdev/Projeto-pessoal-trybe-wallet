@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class Table extends Component {
   render() {
     const { expenses } = this.props;
+    console.log(expenses);
     return (
       <div>
         <table>
@@ -35,10 +37,17 @@ class Table extends Component {
                       .toFixed(2) }
                   </td>
                   <td>Real</td>
+                  <td>
+                    <button
+                      data-testid="delete-btn"
+                      type="button"
+                    >
+                      Excluir
+                    </button>
+                  </td>
                 </tr>
               );
-            }))
-            : null}
+            })) : null}
         </table>
       </div>
     );
@@ -54,5 +63,3 @@ Table.propTypes = {
 };
 
 export default connect(mapStateToProps)(Table);
-
-// Subind para o GitHub mais uma vez.Git estava Off.

@@ -10,7 +10,6 @@ class Wallet extends React.Component {
   componentDidMount() {
     const { objCurrencies } = this.props;
     objCurrencies();
-    // fetchCurrency().then((response) => objCurrencies(response));
   }
 
   render() {
