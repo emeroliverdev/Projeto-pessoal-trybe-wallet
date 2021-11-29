@@ -54,3 +54,5 @@ Table.propTypes = {
 };
 
 export default connect(mapStateToProps)(Table);
+
+// Subind para o GitHub mais uma vez.Git estava Off.
