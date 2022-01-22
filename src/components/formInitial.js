@@ -7,24 +7,32 @@ class FormInitial extends Component {
     const { value, description, onChange } = this.props;
     return (
       <>
-        <input
-          data-testid="value-input"
-          type="number"
-          placeholder="Valor R$"
-          className="value-input"
-          onChange={ onChange }
-          value={ value }
-          name="value"
-        />
-        <input
-          data-testid="description-input"
-          type="text"
-          placeholder="Descrição despesa"
-          className="description-input"
-          onChange={ onChange }
-          value={ description }
-          name="description"
-        />
+        <label htmlFor="form-valor" className="label-form">
+          Valor &nbsp;
+          <input
+            data-testid="value-input"
+            type="number"
+            placeholder="Valor R$"
+            className="value-input"
+            onChange={ onChange }
+            value={ value }
+            name="value"
+            id="form-valor"
+          />
+        </label>
+        <label htmlFor="form-descricao" className="label-form">
+          Descrição &nbsp;
+          <input
+            data-testid="description-input"
+            type="text"
+            placeholder="Descrição despesa"
+            className="description-input"
+            onChange={ onChange }
+            value={ description }
+            name="description"
+            id="form-descricao"
+          />
+        </label>
       </>
     );
   }

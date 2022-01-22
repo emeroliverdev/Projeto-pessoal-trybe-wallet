@@ -25,11 +25,13 @@ class Wallet extends React.Component {
       <header>
         <div className="container-header">
           <div className="email-totalExpenses">
-            <span data-testid="email-field">{ `Email: ${email}`}</span>
-            <span data-testid="total-field">
-              { `Despesas totais: R$ ${totalExpenses}` }
-            </span>
-            <span data-testid="header-currency-field">BRL</span>
+            <div className="email">
+              <span data-testid="email-field">{ `Email: ${email}`}</span>
+              <span data-testid="total-field">
+                { `Despesas totais: R$ ${totalExpenses}` }
+              </span>
+              <span data-testid="header-currency-field">BRL</span>
+            </div>
           </div>
           <Form />
           <Table />

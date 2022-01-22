@@ -15,8 +15,8 @@ class Form extends Component {
       value: 0,
       description: '',
       currency: 'USD',
-      method: '',
-      tag: '',
+      method: 'Dinheiro',
+      tag: 'Alimentação',
       exchangeRates: {},
     };
     this.handleChange = this.handleChange.bind(this);
@@ -59,8 +59,8 @@ class Form extends Component {
             value={ value }
             description={ description }
           />
-          <label htmlFor="moeda">
-            Moeda
+          <label htmlFor="moeda" className="label-form">
+            Moeda &nbsp;
             <select
               data-testid="currency-input"
               type="text"

@@ -1,0 +1,35 @@
+.div-table {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+}
+
+.table-head {
+  background-color: #e9e9ee;
+  color: #4f4f4f;
+  font-size: 12px;
+}
+
+.th {
+  background-color: #e9e9ee;
+  color: aqua;
+  display: flex;
+  font-size: 5px;
+  justify-content: space-around;
+  justify-content: center;
+}
+
+.tr-body {
+  background-color: whitesmoke;
+  color: #4f4f4f;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}

@@ -1,24 +1,62 @@
-.login-page {
+.login-page-global {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 70px;
+  height: 600px;
+  justify-content: start;
+}
+
+.login-page {
+  align-items: center;
+  border: 2px solid #4f4f4f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 110px;
   justify-content: space-between;
-  padding: 15%;
+  padding-top: 0;
+  width: 220px;
 }
 
 .input-email {
+  text-align: center;
   width: 200px;
 }
 
 .input-password {
+  text-align: center;
   width: 200px;
 }
 
-.btn-login {
+.btn-disabled {
+  background-color: lightgray;
+  border: 0;
+  border-radius: 7px;
+  color: #4f4f4f;
+  height: 22px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 210px;
+}
+
+p {
+  color: #4f4f4f;
+  font-size: 12px;
+  margin: 2px;
+}
+
+.img-trybewallet {
+  height: 300px;
+  width: 300px;
+}
+
+.btn-able {
   background-color: dodgerblue;
   border: 0;
+  border-radius: 7px;
   color: white;
   height: 22px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   width: 210px;
 }

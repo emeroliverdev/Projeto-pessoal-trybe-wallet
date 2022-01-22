@@ -1,0 +1,19 @@
+.btn-excluir {
+  background-color: red;
+  border: 0;
+  border-radius: 3px;
+  color: whitesmoke;
+}
+
+.btn-editar {
+  background-color: limegreen;
+  border: 0;
+  border-radius: 3px;
+  color: whitesmoke;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+

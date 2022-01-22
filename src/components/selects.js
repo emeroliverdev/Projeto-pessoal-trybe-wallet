@@ -7,30 +7,37 @@ class Selects extends Component {
     const { onChange, tag, method } = this.props;
     return (
       <>
-        <select
-          data-testid="method-input"
-          className="select"
-          onChange={ onChange }
-          value={ method }
-          name="method"
-        >
-          <option>Dinheiro</option>
-          <option>Cartão de crédito</option>
-          <option>Cartão de débito</option>
-        </select>
-        <select
-          data-testid="tag-input"
-          className="select"
-          onChange={ onChange }
-          value={ tag }
-          name="tag"
-        >
-          <option>Alimentação</option>
-          <option>Lazer</option>
-          <option>Trabalho</option>
-          <option>Transporte</option>
-          <option>Saúde</option>
-        </select>
+        <label htmlFor="method" className="label-form">
+          Forma de Pgto &nbsp;
+          <select
+            data-testid="method-input"
+            className="select"
+            onChange={ onChange }
+            value={ method }
+            name="method"
+            id="method"
+          >
+            <option>Dinheiro</option>
+            <option>Cartão de crédito</option>
+            <option>Cartão de débito</option>
+          </select>
+        </label>
+        <label htmlFor="tag" className="label-form">
+          Tag &nbsp;
+          <select
+            data-testid="tag-input"
+            className="select"
+            onChange={ onChange }
+            value={ tag }
+            name="tag"
+          >
+            <option>Alimentação</option>
+            <option>Lazer</option>
+            <option>Trabalho</option>
+            <option>Transporte</option>
+            <option>Saúde</option>
+          </select>
+        </label>
       </>
     );
   }
