@@ -12,3 +12,7 @@
 	<img  alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
 	<img  alt="Redux" src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white"/>
 </div>
+
+##
+
+:desktop_computer: :arrow_forward: Link do projeto: https://projeto-pessoal-trybe-wallet-emeroliverdev.vercel.app/
